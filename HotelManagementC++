@@ -1,0 +1,191 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int quant;
+  int choice;
+
+  // Stores the quantity of 
+  int qrooms = 0;
+  int qpasta = 0;
+  int qburger = 0;
+  int qnoodles = 0;
+  int qshake = 0;
+  int qchicken = 0;
+
+  // food items sold 
+  int srooms = 0;
+  int spasta = 0;
+  int sburger = 0;
+  int snoodles = 0;
+  int sshake = 0;
+  int schicken = 0;
+
+  // total price of items sold
+  int total_rooms = 0;
+  int total_pasta = 0;
+  int total_burger = 0;
+  int total_noodles = 0;
+  int total_shake = 0;
+  int total_chicken = 0;
+
+  cout <<"\n\t Quantity of items we have";
+  cout <<"\n Rooms available:";
+  cin>>qrooms;
+
+  cout <<"\n Quantity of pasta : ";
+  cin >>qpasta;
+
+  cout <<"\n Quantity of burger : ";
+  cin >>qburger;
+
+  cout <<"\n Quantity of noodles : ";
+  cin >>qnoodles;
+
+  cout <<"\n Quantity of shake : ";
+  cin >>qshake;
+
+  cout <<"\n Quantity of chicken : ";
+  cin >>qchicken;
+
+  m:
+  cout <<"\n\t\t\t Please sekect from the menu options ";
+  cout <<"\n\n1.) Rooms";
+  cout <<"\n2.) Pasta";
+  cout <<"\n3.) Burger";
+  cout <<"\n4.) Noodles";
+  cout <<"\n5.) Shake";
+  cout <<"\n6.) Chicken-roll";
+  cout <<"\n7.) Information regarding sales and collection ";
+  cout <<"\n8.) Exit";
+
+  cout <<"\n\n Please Enter your choice! ";
+  cin >>choice;
+
+  switch(choice) 
+    {
+      case 1:
+        cout <<"\n\n Enter the number of rooms you want: ";
+        cin >>quant;
+        if (qrooms - srooms >= quant) {
+          srooms = srooms + quant;
+          total_rooms = total_rooms + quant * 1200;
+          cout <<"\n\n\t\t"<<quant<<"room/rooms have been alloted to you!";
+        }
+        else 
+          cout <<"\n\tOnly"<<qrooms - srooms<<"Rooms remaining in this hotel ";
+          break;
+        
+
+          case 2:
+        cout <<"\n\n Enter Pasta Quantity: ";
+        cin >>quant;
+        if (qpasta - spasta >= quant) {
+          spasta = spasta + quant;
+          total_pasta = total_pasta + quant * 250;
+          cout <<"\n\n\t\t"<<quant<<" pasta is the order!";
+        }
+        else 
+          cout <<"\n\tOnly"<<qpasta - spasta<<"Pasta remaining in hotel  ";
+          break;
+
+
+      case 3:
+        cout <<"\n\n Enter Burger Quantity: ";
+        cin >>quant;
+        if (qburger - sburger >= quant) {
+          sburger = sburger + quant;
+          total_burger = total_burger + quant * 120;
+          cout <<"\n\n\t\t"<<quant<<" pasta is the order!";
+        }
+        else 
+          cout <<"\n\tOnly"<<qburger - sburger<<"burgers remaining in the hotel  ";
+          break;
+
+
+      case 4:
+        cout <<"\n\n Enter Noodle Quantity: ";
+        cin >>quant;
+        if (qnoodles - snoodles >= quant) {
+          snoodles = snoodles + quant;
+          total_noodles = total_noodles + quant * 250;
+          cout <<"\n\n\t\t"<<quant<<" noodle is the order!";
+        }
+        else 
+          cout <<"\n\tOnly"<<qnoodles - snoodles<<"noodle remaining in hotel ";
+          break;
+
+        case 5:
+        cout <<"\n\n Enter Shakes Quantity: ";
+        cin >>quant;
+        if (qshake - sshake >= quant) {
+          sshake = sshake + quant;
+          total_shake = total_shake + quant * 30;
+          cout <<"\n\n\t\t"<<quant<<" shake is the order!";
+        }
+        else 
+          cout <<"\n\tOnly"<<qshake - sshake<<"shake remaining in hotel ";
+          break;
+
+      
+        case 6:
+        cout <<"\n\n Enter Chicken-roll Quantity: ";
+        cin >>quant;
+        if (qchicken - schicken >= quant) {
+          schicken = schicken + quant;
+          total_chicken = total_chicken + quant * 150;
+          cout <<"\n\n\t\t"<<quant<<" chicken is the order!";
+        }
+        else 
+          cout <<"\n\tOnly"<<qshake - sshake<<"chicken-roll remaining in hotel ";
+          break;
+
+
+      case 7: 
+        cout <<"\n\t\tDetails of sales and collections ";
+        cout <<"\n\n Number of rooms we had : "<<qrooms;
+        cout <<"\n\n Number of rooms we gave for rent "<<srooms;
+        cout <<"\n\n Remaining rooms : "<<qrooms - srooms;
+        cout <<"\n\n Total rooms collection for the day: "<<total_rooms;
+
+        cout <<"\n\n Number of Pasta we had : "<<qpasta;
+        cout <<"\n\n Number of Pasta we sold "<<spasta;
+        cout <<"\n\n Remaining Pastas : "<<qpasta - spasta;
+        cout <<"\n\n Total pasta collection for the day: "<<total_pasta;
+
+        cout <<"\n\n Number of Burger we had : "<<qburger;
+        cout <<"\n\n Number of Burger we sold "<<sburger;
+        cout <<"\n\n Remaining Burger : "<<qburger - sburger;
+        cout <<"\n\n Total Burger collection for the day: "<<total_burger;
+
+        cout <<"\n\n Number of Noodles we had : "<<qnoodles;
+        cout <<"\n\n Number of Noodles we sold "<<snoodles;
+        cout <<"\n\n Remaining Noodles : "<<qnoodles - snoodles;
+        cout <<"\n\n Total Noodles collection for the day: "<<total_noodles;
+
+        cout <<"\n\n Number of Shakes we had : "<<qshake;
+        cout <<"\n\n Number of Shakes we sold "<<sshake;
+        cout <<"\n\n Remaining Shakes : "<<qshake - sshake;
+        cout <<"\n\n Total Shakes collection for the day: "<<total_shake;
+
+        cout <<"\n\n Number of Chicken-roll we had : "<<qchicken;
+        cout <<"\n\n Number of Chicken-roll we sold "<<schicken;
+        cout <<"\n\n Remaining Chicken-roll : "<<qchicken - schicken;
+        cout <<"\n\n Total Chicken-roll collection for the day: "<<total_chicken;
+
+        cout <<"\n\n\n Total Collection for the day: "<<total_rooms + total_pasta + total_burger + total_noodles + total_shake + total_chicken;
+        break;
+      
+      case 8: 
+        exit(0);
+
+      default:
+        cout <<"\n Please select the numbers mentioned above!";
+      
+      
+        }
+    goto m;
+
+
+  
+    }
